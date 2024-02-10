@@ -40,13 +40,42 @@
 //     inputValue.value = "";
 // })
 
-const sectionall = document.querySelector(".sectionall");
-const btn = document.getElementById("btn");
-btn.addEventListener("click", function(){
-    let text_area = document.getElementById("text-area")
-    let p = document.createElement("p");
-    p.innerText = text_area.value;
-    sectionall.appendChild(p);
+// const sectionall = document.querySelector(".sectionall");
+// const btn = document.getElementById("btn");
+// btn.addEventListener("click", function(){
+//     let text_area = document.getElementById("text-area")
+//     let p = document.createElement("p");
+//     p.innerText = text_area.value;
+//     sectionall.appendChild(p);
 
-    text_area.value = "";
+//     text_area.value = "";
+// })
+
+let input = document.getElementById("input");
+let deleteBtn = document.getElementById("deleteBtn");
+
+input.addEventListener("keyup", function(val){
+    let inputVal = val.target.value;
+    if(inputVal === "delete"){
+        deleteBtn.removeAttribute("disabled")
+    }else{
+        deleteBtn.setAttribute("disabled", true)
+    }
 })
+
+deleteBtn.addEventListener("click", function () {
+    let hello = document.getElementById("hello");
+    hello.style.display = "none";
+    input.value = "";
+})
+
+
+const live = document.querySelector(".live")
+const liveInp = document.querySelector(".liveInp")
+liveInp.addEventListener("input", function(val){
+    // live.inn
+    // console.log()
+    live.innerText = val.target.value;
+})
+
+
