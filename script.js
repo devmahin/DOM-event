@@ -51,31 +51,62 @@
 //     text_area.value = "";
 // })
 
-let input = document.getElementById("input");
-let deleteBtn = document.getElementById("deleteBtn");
+// let input = document.getElementById("input");
+// let deleteBtn = document.getElementById("deleteBtn");
 
-input.addEventListener("keyup", function(val){
-    let inputVal = val.target.value;
-    if(inputVal === "delete"){
-        deleteBtn.removeAttribute("disabled")
-    }else{
-        deleteBtn.setAttribute("disabled", true)
-    }
+// input.addEventListener("keyup", function(val){
+//     let inputVal = val.target.value;
+//     if(inputVal === "delete"){
+//         deleteBtn.removeAttribute("disabled")
+//     }else{
+//         deleteBtn.setAttribute("disabled", true)
+//     }
+// })
+
+// deleteBtn.addEventListener("click", function () {
+//     let hello = document.getElementById("hello");
+//     hello.style.display = "none";
+//     input.value = "";
+// })
+
+
+// const live = document.querySelector(".live")
+// const liveInp = document.querySelector(".liveInp")
+// liveInp.addEventListener("input", function(val){
+//     // live.inn
+//     // console.log()
+//     live.innerText = val.target.value;
+// })
+
+const item2 = document.querySelector(".item2");
+const item3 = document.querySelector(".item3");
+const item4 = document.querySelector(".item4");
+const ul_parent = document.querySelector(".ul-parent");
+
+item2.addEventListener("click", function(event){
+    // console.log(event)
+    console.log("Item - 2")
+    event.stopImmediatePropagation()
+
+})
+item2.addEventListener("click", function(event){
+    // console.log(event)
+    console.log("Item - 2")
+
+})
+item2.addEventListener("click", function(event){
+    // console.log(event)
+    console.log("Item - 2")
+
+})
+item2.addEventListener("click", function(event){
+    // console.log(event)
+    console.log("Item - 2")
+
 })
 
-deleteBtn.addEventListener("click", function () {
-    let hello = document.getElementById("hello");
-    hello.style.display = "none";
-    input.value = "";
+
+ul_parent.addEventListener("click", function(event){
+    console.log("UL")
+
 })
-
-
-const live = document.querySelector(".live")
-const liveInp = document.querySelector(".liveInp")
-liveInp.addEventListener("input", function(val){
-    // live.inn
-    // console.log()
-    live.innerText = val.target.value;
-})
-
-
