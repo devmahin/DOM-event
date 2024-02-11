@@ -78,35 +78,63 @@
 //     live.innerText = val.target.value;
 // })
 
-const item2 = document.querySelector(".item2");
-const item3 = document.querySelector(".item3");
-const item4 = document.querySelector(".item4");
-const ul_parent = document.querySelector(".ul-parent");
+// const item2 = document.querySelector(".item2");
+// const item3 = document.querySelector(".item3");
+// const item4 = document.querySelector(".item4");
+// const ul_parent = document.querySelector(".ul-parent");
 
-item2.addEventListener("click", function(event){
-    // console.log(event)
-    console.log("Item - 2")
-    event.stopImmediatePropagation()
+// item2.addEventListener("click", function(event){
+//     // console.log(event)
+//     console.log("Item - 2")
+//     event.stopImmediatePropagation()
+
+// })
+// item2.addEventListener("click", function(event){
+//     // console.log(event)
+//     console.log("Item - 2")
+
+// })
+// item2.addEventListener("click", function(event){
+//     // console.log(event)
+//     console.log("Item - 2")
+
+// })
+// item2.addEventListener("click", function(event){
+//     // console.log(event)
+//     console.log("Item - 2")
+
+// })
+
+
+// ul_parent.addEventListener("click", function(event){
+//     console.log("UL")
+
+// })
+
+
+
+const parentItem = document.getElementById("parentItem");
+
+
+const item = document.querySelectorAll(".item");
+// for(let items of item){
+// items.addEventListener("click",function(event){
+//    event.target.parentNode.removeChild(event.target)
+
+// })
+// }
+
+parentItem.addEventListener("click", (event) =>{
+    // console.log(event.target)
+    event.target.parentNode.removeChild(event.target)
 
 })
-item2.addEventListener("click", function(event){
-    // console.log(event)
-    console.log("Item - 2")
 
-})
-item2.addEventListener("click", function(event){
-    // console.log(event)
-    console.log("Item - 2")
-
-})
-item2.addEventListener("click", function(event){
-    // console.log(event)
-    console.log("Item - 2")
-
-})
-
-
-ul_parent.addEventListener("click", function(event){
-    console.log("UL")
-
+const element = document.querySelector(".element");
+element.addEventListener("click", function(event){
+    let li = document.createElement("li");
+    li.innerText = "NEW ELEMENT"
+    li.classList.add("item")
+    
+    parentItem.appendChild(li)
 })
